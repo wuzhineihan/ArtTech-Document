@@ -27,12 +27,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "其他/常用工具网站.md",
+                "file": "社团介绍/社团运行机制.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "常用工具网站"
+              "title": "社团运行机制"
+            }
+          },
+          {
+            "id": "29ec7658c16b3e90",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.14"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.9.14"
             }
           },
           {
@@ -50,7 +62,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -199,10 +211,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "3dd1c6833e094684",
+  "active": "29ec7658c16b3e90",
   "lastOpenFiles": [
-    "社团介绍/成员.md",
     "其他/常用工具网站.md",
+    "社团介绍/成员.md",
     "游戏开发技术/UE入门.md",
     "社团介绍/社团介绍.md",
     "社团介绍/社团运行机制.md",
