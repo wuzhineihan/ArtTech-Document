@@ -6,7 +6,7 @@
       {
         "id": "42539e725c914aa3",
         "type": "tabs",
-        "dimension": 81.75182481751825,
+        "dimension": 65.83941605839416,
         "children": [
           {
             "id": "074f804337f0143f",
@@ -14,35 +14,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "活动信息/开发活动/NAGO GameJam 2025 艺数盒子站.md",
+                "file": "活动信息/开发活动/ArtTech 30 Day Prototype 2025.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NAGO GameJam 2025 艺数盒子站"
-            }
-          },
-          {
-            "id": "3dd1c6833e094684",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "社团介绍/社团运行机制.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "社团运行机制"
+              "title": "ArtTech 30 Day Prototype 2025"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "c131e561fefc561d",
         "type": "tabs",
-        "dimension": 18.248175182481752,
+        "dimension": 34.160583941605836,
         "children": [
           {
             "id": "1fe3049732205f73",
@@ -50,13 +35,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "社团介绍/社团运行机制.md",
+                "file": "活动信息/开发活动/ArtTech 30 Day Prototype 2025.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "社团运行机制 的大纲"
+              "title": "ArtTech 30 Day Prototype 2025 的大纲"
             }
           }
         ]
@@ -204,27 +189,28 @@
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false,
       "command-palette:打开命令面板": false
     }
   },
-  "active": "3dd1c6833e094684",
+  "active": "074f804337f0143f",
   "lastOpenFiles": [
-    "活动信息/开发活动/ArtTech 30 Day Prototype 2025.md",
-    "assets/images/微信图片_20251110125336_104_193.jpg",
     "活动信息/开发活动/NAGO GameJam 2025 艺数盒子站.md",
-    "活动信息/讲座活动/25年招新宣讲.md",
-    "assets/images/微信图片_20251110150313_12_331.jpg",
-    "其他/常用工具网站.md",
+    "().md",
+    "活动信息/开发活动/ArtTech 30 Day Prototype 2025.md",
+    "assets/images/cover.png",
+    "assets/images/19220691577E227D501DA4D631D74E68.jpg",
+    "assets/images/7F143A277CAA1E1489D72D74DD1CCF3D.jpg",
+    "assets/images/4C12CFB6F3B645F7A8AF5F6DA40C862D.jpg",
+    "assets/images/3cf7bdb45275c8520782914b1d456c3f.png",
+    "assets/images/游戏截图.jpg",
+    "assets/images/e71e31a511907ac2ac7e1215fa5395fc.jpg",
+    "assets/images/屏幕截图 2025-11-18 220641.png",
+    "assets/images/屏幕截图 2025-11-19 211609.png",
+    "assets/images/2fea92011a6fe6afd687152ed8cabaac.png",
+    "项目信息/蜀祭·太初.md",
     "社团介绍/社团运行机制.md",
-    "assets/images/微信图片_20251110150827_272_18.jpg",
-    "assets/images/微信图片_20251110125323_93_193.jpg",
-    "assets/images/微信图片_20251110125321_91_193.jpg",
-    "assets/images/微信图片_20251110125310_84_193 1.jpg",
-    "assets/images/微信图片_20251110125411_131_193.jpg",
-    "assets/images/微信图片_20251110150337_24_331 1.jpg",
-    "assets/images/微信图片_20251110150337_24_331.jpg",
-    "assets/images/微信图片_20251110125409_129_193.jpg",
+    "活动信息/讲座活动/25年招新宣讲.md",
+    "其他/常用工具网站.md",
     "活动信息/讲座活动/1001夜技术分享.md",
     "活动信息/讲座活动/24年招新宣讲.md",
     "活动信息/25年深圳文博会.md",
@@ -245,7 +231,6 @@
     "Unity",
     "游戏开发技术/Unity入门.md",
     "Unity/Unity入门.md",
-    "UE/UE入门.md",
     "游戏开发技术",
     "未命名.canvas",
     "未命名 1.canvas",
