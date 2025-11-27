@@ -76,7 +76,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#心理恐怖",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -97,7 +97,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -194,9 +195,12 @@
   },
   "active": "074f804337f0143f",
   "lastOpenFiles": [
+    "assets/images/1FE54E3194BF5216CD50DC21350D41F0.png",
+    "assets/images/4EBBD7F6741A400F8D4067FB226450BD.png",
+    "assets/images/f8adbf3aaf2051f262b57a20d9c144ef_720.jpg",
     "活动信息/开发活动/NAGO GameJam 2025 艺数盒子站.md",
-    "().md",
     "活动信息/开发活动/ArtTech 30 Day Prototype 2025.md",
+    "().md",
     "assets/images/cover.png",
     "assets/images/19220691577E227D501DA4D631D74E68.jpg",
     "assets/images/7F143A277CAA1E1489D72D74DD1CCF3D.jpg",
@@ -205,8 +209,6 @@
     "assets/images/游戏截图.jpg",
     "assets/images/e71e31a511907ac2ac7e1215fa5395fc.jpg",
     "assets/images/屏幕截图 2025-11-18 220641.png",
-    "assets/images/屏幕截图 2025-11-19 211609.png",
-    "assets/images/2fea92011a6fe6afd687152ed8cabaac.png",
     "项目信息/蜀祭·太初.md",
     "社团介绍/社团运行机制.md",
     "活动信息/讲座活动/25年招新宣讲.md",
@@ -230,7 +232,6 @@
     "Unity/入门.md",
     "Unity",
     "游戏开发技术/Unity入门.md",
-    "Unity/Unity入门.md",
     "游戏开发技术",
     "未命名.canvas",
     "未命名 1.canvas",
