@@ -1,0 +1,1862 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Unity/csharp%E7%BC%96%E7%A8%8B%E8%83%BD%E5%8A%9B%E8%BF%9B%E9%98%B6/">
+      
+      
+        <link rel="next" href="../URP%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E4%BB%8B%E7%BB%8D/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/logo.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>Unity美术基础 - ArtTech Document</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans SC";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unity" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="ArtTech Document" class="md-header__button md-logo" aria-label="ArtTech Document" data-md-component="logo">
+      
+  <img src="../../../assets/logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ArtTech Document
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Unity美术基础
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E7%A4%BE%E5%9B%A2%E4%BB%8B%E7%BB%8D/%E7%A4%BE%E5%9B%A2%E4%BB%8B%E7%BB%8D/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  社团介绍
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../UE/UE%E5%85%A5%E9%97%A8/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  游戏开发技术
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E9%A1%B9%E7%9B%AE%E4%BF%A1%E6%81%AF/%E8%9C%80%E7%A5%AD%C2%B7%E5%A4%AA%E5%88%9D/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  项目信息
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E6%B4%BB%E5%8A%A8%E4%BF%A1%E6%81%AF/%E5%B8%B8%E9%A9%BB%E6%B4%BB%E5%8A%A8/%E6%B8%B8%E6%88%8F%E6%B2%99%E9%BE%99/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  活动信息
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E5%85%B6%E4%BB%96/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%BD%91%E7%AB%99/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  其他
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ArtTech Document" class="md-nav__button md-logo" aria-label="ArtTech Document" data-md-component="logo">
+      
+  <img src="../../../assets/logo.jpg" alt="logo">
+
+    </a>
+    ArtTech Document
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../%E7%A4%BE%E5%9B%A2%E4%BB%8B%E7%BB%8D/%E7%A4%BE%E5%9B%A2%E4%BB%8B%E7%BB%8D/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    社团介绍
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    游戏开发技术
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    游戏开发技术
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../UE/UE%E5%85%A5%E9%97%A8/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UE
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../Unity/Unity%E5%85%A5%E9%97%A8/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unity
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unity渲染
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unity渲染
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unity美术基础
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unity美术基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        游戏美术的细分方向
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何获取游戏资产？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模型、材质、贴图的导入与设置
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模型、材质、贴图的导入与设置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dcc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        从 DCC 软件导入模型的流程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unity_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unity模型导入面板和材质面板讲解
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unity_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unity的贴图设置面板讲解
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        灯光、雾效设置与后处理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="灯光、雾效设置与后处理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unity_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unity灯光官方文档
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unity_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unity的天空盒和雾效
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unity_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unity后处理详解
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unity-ugui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unity UGUI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unity UGUI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unity-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推荐阅读Unity UI 官方文档
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canvas 自适应
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        其他
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其他">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unity3dprobuilder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        在Unity内构建3D关卡原型：ProBuilder插件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unity-sorting-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        在 Unity 中使用排序图层（Sorting Layer）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../URP%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E4%BB%8B%E7%BB%8D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    URP相关配置介绍
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%94%A8github%E5%A4%87%E4%BB%BDUnity%E9%A1%B9%E7%9B%AE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    用github备份Unity项目
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cpp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    游戏设计模式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../%E9%A1%B9%E7%9B%AE%E4%BF%A1%E6%81%AF/%E8%9C%80%E7%A5%AD%C2%B7%E5%A4%AA%E5%88%9D/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    项目信息
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    
+  
+  
+  
+    <a href="../../../%E6%B4%BB%E5%8A%A8%E4%BF%A1%E6%81%AF/%E5%B8%B8%E9%A9%BB%E6%B4%BB%E5%8A%A8/%E6%B8%B8%E6%88%8F%E6%B2%99%E9%BE%99/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    活动信息
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../%E5%85%B6%E4%BB%96/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%BD%91%E7%AB%99/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        游戏美术的细分方向
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何获取游戏资产？
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模型、材质、贴图的导入与设置
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模型、材质、贴图的导入与设置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dcc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        从 DCC 软件导入模型的流程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unity_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unity模型导入面板和材质面板讲解
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unity_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unity的贴图设置面板讲解
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        灯光、雾效设置与后处理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="灯光、雾效设置与后处理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unity_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unity灯光官方文档
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unity_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unity的天空盒和雾效
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unity_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unity后处理详解
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unity-ugui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unity UGUI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unity UGUI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unity-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推荐阅读Unity UI 官方文档
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canvas 自适应
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        其他
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其他">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unity3dprobuilder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        在Unity内构建3D关卡原型：ProBuilder插件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unity-sorting-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        在 Unity 中使用排序图层（Sorting Layer）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    首页
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../UE/UE%E5%85%A5%E9%97%A8/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    游戏开发技术
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Unity渲染
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="unity">Unity 美术基础</h1>
+<blockquote>
+<p>本页面由<a href="../../../%E7%A4%BE%E5%9B%A2%E4%BB%8B%E7%BB%8D/%E6%88%90%E5%91%98/">胡嘉悦</a>于 2025.10.6 编辑并发布</p>
+</blockquote>
+<h2 id="_1">游戏美术的细分方向</h2>
+<hr />
+<p>某游戏厂商2025的<strong>美术</strong>训练营开设了以下方向：</p>
+<p><img alt="image.png" src="../../../assets/images/UnityGameArt/image.png" /></p>
+<p>如果你和我一样对技术美术感兴趣，以下是一些经典的入门教程:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=kr7XYXMM7-U">Technical Art 技术美术会做什么_Youtube</a></li>
+<li><a href="https://github.com/candycat1992/Unity_Shaders_Book">《Unity Shader入门精要》源代码</a></li>
+<li><a href="https://catlikecoding.com/unity/tutorials/">Catlike Coding - Unity C# 和着色器教程</a></li>
+<li><a href="https://www.bilibili.com/video/BV1X7411F744/?spm_id_from=333.337.search-card.all.click&amp;vd_source=b494db6c8f6cf9d675a0cca5dde89df7">GAMES101-现代计算机图形学入门-闫令琪_bilibili</a></li>
+<li><a href="https://www.bilibili.com/video/BV1L54y1s7xw/?spm_id_from=333.337.search-card.all.click&amp;vd_source=b494db6c8f6cf9d675a0cca5dde89df7">技术美术百人计划_bilibili</a>  </li>
+</ul>
+<h2 id="_2">如何获取游戏资产？</h2>
+<hr />
+<p>购买版权</p>
+<ul>
+<li>
+<p><a href="https://assetstore.unity.com/zh-CN?srsltid=AfmBOoqexUib0mwMfVMloLWP7TMps4OkOqt9UkBQMSzJ_g02k-QoA-_c&amp;utm_source=chatgpt.com">Unity Asset Store</a> Unity官方商城</p>
+</li>
+<li>
+<p><a href="https://sketchfab.com/Emerald_Eel/collections/free-game-assets-d7263076d3b043a296321b8085a723d9?utm_source=chatgpt.com">Sketchfab</a> 模型</p>
+</li>
+</ul>
+<p>使用免费开源资产</p>
+<ul>
+<li><a href="https://opengameart.org/">OpenGameArt.org</a> / <a href="https://kenney.nl/assets">Kenney</a>  资产包</li>
+<li><a href="https://ambientcg.com/">ambientCG</a> / <a href="https://cc0-textures.com/">CC0 Textures</a> 材质贴图</li>
+<li><a href="https://polyhaven.com/hdris">Poly Haven</a> HDRI 贴图</li>
+<li><a href="https://freesound.org/">Freesound</a> 音频</li>
+</ul>
+<p>也可以自己制作</p>
+<h2 id="_3">模型、材质、贴图的导入与设置</h2>
+<hr />
+<p>下文主要整理了一些教程的链接，这些教程的原文内容详尽清晰，这里就不再重复阐述，仅在部分章节中补充了一些的实践笔记。</p>
+<h3 id="dcc"><a href="https://blog.csdn.net/weixin_43147385/article/details/124880331#:~:text=,1.%E5%88%B6%E4%BD%9C%E5%B9%B6%E5%AF%BC%E5%87%BA%E6%A8%A1%E5%9E%8B%EF%BC%8C%E4%BB%A5%E5%8F%8A%E8%AE%BE%E7%BD%AE%E5%8F%82%E6%95%B0">从 DCC 软件导入模型的流程</a></h3>
+<p>如果模型需要从DCC软件（blender、3DMax）导出为FBX，再导入Unity，可以参考这篇教程。</p>
+<h3 id="unity_1"><a href="https://blog.csdn.net/qq_36303853/article/details/134863228#:~:text=match%20at%20L162%20albedo%2FbaseColor%E5%92%8Cnormal%E8%B4%B4%E5%9B%BE%E5%A4%A7%E5%AE%B6%E5%BA%94%E8%AF%A5%E9%83%BD%E7%9F%A5%E9%81%93%EF%BC%8C%E5%88%86%E5%88%AB%E6%98%AF%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE%E5%92%8C%E6%B3%95%E7%BA%BF%E8%B4%B4%E5%9B%BE%E3%80%82%20AO%2FOcclus%E3%80%81metallic%E8%B4%B4%E5%9B%BE%E4%B9%9F%E6%AF%94%E8%BE%83%E7%AE%80%E5%8D%95%EF%BC%8C%E5%9C%A8standard%E7%9A%84shader%E7%9A%84Occlusion%E5%92%8CMetallic%E5%A4%84%E6%B7%BB%E5%8A%A0%E5%8D%B3%E5%8F%AF%E3%80%82,Image%3A%20%E5%9C%A8%E8%BF%99%E9%87%8C%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%8F%8F%E8%BF%B0%20%E8%A1%A5%E5%85%85Emissive%E8%87%AA%E5%8F%91%E5%85%89%E8%B4%B4%E5%9B%BE">Unity模型导入面板和材质面板讲解</a></h3>
+<p>当资源包中已包含贴图与 FBX 模型时，可参考这篇文章完成 FBX 导入设置，并了解如何在 Unity 中将贴图分配至材质的相应通道。</p>
+<blockquote>
+<p>观察你下载的FBX的贴图名称，如果是 Base Color（基础色）、Metallic (金属度)，在材质面板选择Metallic金属度工作流，如果是 Diffuse（漫反射）、Specular（高光），选择Specular金属度工作流。<br />
+<img alt="image.png" src="../../../assets/images/UnityGameArt/image%201.png" /></p>
+<p>为了节约空间，smoothness一般通过读取其他贴图的A通道获得而不是使用一张单独的贴图<br />
+<img alt="image.png" src="../../../assets/images/UnityGameArt/image%202.png" /></p>
+</blockquote>
+<h3 id="unity_2"><a href="https://blog.csdn.net/2401_83878847/article/details/145796147#:~:text=">Unity的贴图设置面板讲解</a></h3>
+<p>一张贴图通常包含 RGBA 四个通道，不同类型的贴图会在各通道中存储不同的信息，解读方式也对应不同。阅读这篇文章可以帮助你理解并正确设置贴图参数。</p>
+<blockquote>
+<p><img alt="image.png" src="../../../assets/images/UnityGameArt/image%203.png" /><br />
+- 法线贴图的TextureType 要设置为Normal Map<br />
+- 什么时候需要勾选sRGB?<br />
+ - 颜色类贴图 → 需要，是看见的物体颜色，如基础色Basecolor / Albedo / Diffuse、自发光颜色Emission<br />
+ - 数据类贴图 → 不需要，是参与计算的物理值，如金属度、AO等<br />
+- 草、头发等透明贴图，由Alpha 控制可见与透明区域，建议勾选 Alpha Is Transparency</p>
+</blockquote>
+<h2 id="_4">灯光、雾效设置与后处理</h2>
+<hr />
+<h3 id="unity_3"><a href="https://docs.unity3d.com/cn/2021.2/Manual/UsingLights.html">Unity灯光官方文档</a></h3>
+<p>在Hierarchy面板右键，或者菜单 <strong>GameObject &gt; Light</strong> 中选择所需类型的灯光（例如 Directional Light 平行光、Point Light 点光源等），然后将光源放置在场景中合适的位置即可。</p>
+<p><img alt="image.png" src="../../../assets/images/UnityGameArt/image%204.png" /></p>
+<p>在简单场景中，实时光照（Realtime Lighting）已经足够；但当你开始追求<strong>更高的性能或更真实的光照效果</strong>时，就需要了解以下系统：</p>
+<ul>
+<li><strong>烘焙光照（Baked Lighting）</strong>：将静态物体的光照提前计算并存储，显著提高性能。</li>
+<li><strong>光照探针（Light Probe）</strong>：用于让<strong>动态物体</strong>（会移动的角色、道具）在烘焙场景中也能获得环境光照的影响。</li>
+<li><strong>反射探针（Reflection Probe）</strong>：为物体提供<strong>环境反射</strong>，例如金属表面或玻璃的镜面感。</li>
+</ul>
+<h3 id="unity_4">Unity的天空盒和雾效</h3>
+<ol>
+<li>顶部 window → Rendering → Lighting 打开 <strong>Light</strong> 设置面板<br />
+   &emsp;<img alt="image.png" src="../../../assets/images/UnityGameArt/image%206.png" /></li>
+<li>选择 <strong>Environment</strong> 选项卡，可以在这里设置HDRI天空盒及Fog雾效<br />
+   &emsp;<img alt="image.png" src="../../../assets/images/UnityGameArt/image%207.png" /></li>
+<li>请确保在Scene窗口顶部勾选了Fog的预览图层<br />
+   &emsp;<img alt="顶部预览图层的Fog要勾选才能在场景中看到雾效" src="../../../assets/images/UnityGameArt/image%205.png" /></li>
+</ol>
+<h3 id="unity_5"><a href="https://aiferu.xyz/archives/65.html">Unity后处理详解</a></h3>
+<p>这篇文章详细介绍了如何在Unity开启后处理效果，已经每个后处理功能对应的效果（需要在国内IP访问）。</p>
+<p>后处理（Post-Processing）指在渲染完成后，整体调整最终画面的光感、色彩和氛围（类似滤镜）。</p>
+<p><strong>最常用的后处理是 Tonemapping + Bloom</strong><br />
+<img alt="image.png" src="../../../assets/images/UnityGameArt/image%208.png" /></p>
+<p>Tonemapping —— 把场景中的<strong>HDR 高动态亮度</strong>压缩到显示设备的<strong>0–1 范围</strong>，防止过曝，同时保持亮暗层次，颜色更“电影化”。</p>
+<p><strong>几乎所有使用 HDR 光照或 Bloom 的项目都建议开启！</strong></p>
+<p><img alt="image.png" src="../../../assets/images/UnityGameArt/image%209.png" /></p>
+<blockquote>
+<p>Tonemapping中 的 ACES、Filmic、Neutral 等曲线都会非线性地压缩亮部、抬暗部，所以强烈建议在<strong>项目初期就启用目标Tonemapping曲线</strong>，在开启的基础上再进行其他曝光和颜色的调整。</p>
+</blockquote>
+<p>Bloom（泛光 / 光晕）—— 在明亮区域（如灯光、反射、水面、霓虹）周围产生柔和光晕，需要在URP设置和相机设置中开启HDR</p>
+<h2 id="unity-ugui">Unity UGUI</h2>
+<hr />
+<h3 id="unity-ui">推荐阅读<a href="https://docs.unity3d.com/cn/2021.1/Manual/UIBasicLayout.html">Unity UI 官方文档</a></h3>
+<h3 id="canvas">Canvas 自适应</h3>
+<p>导出的游戏可能会在不同尺寸的屏幕下显示，所以需要选择适配方式</p>
+<blockquote>
+<p>推荐在Canvas下使用 Canvas Scale 中的 Scale With Screen Size 模式，并设置为 1920 x 1080。<br />
+<img alt="image.png" src="../../../assets/images/UnityGameArt/image%2010.png" /></p>
+<p>或者参考这篇文章<a href="https://blog.csdn.net/hello_1995/article/details/122130097#:~:text=Canvas%20Scaler%20%E8%BF%99%E4%B8%AA%E7%BB%84%E4%BB%B6%E7%94%A8%E6%9D%A5%E5%81%9A%E6%95%B4%E4%BD%93%20UI%20%E5%B1%8F%E5%B9%95%E9%80%82%E9%85%8D%E7%9A%84%E3%80%82%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B4%E4%BD%93%E9%80%82%E9%85%8D%EF%BC%9F%E5%9B%A0%E4%B8%BA%E9%80%82%E9%85%8D%E6%97%B6%E8%BF%98%E4%BC%9A%E7%94%A8%E5%88%B0,Canvans%20%E6%B8%B2%E6%9F%93%E6%A8%A1%E5%BC%8F%E4%B8%BA%20World%20Space%20%E6%97%B6%EF%BC%8C%E7%BC%A9%E6%94%BE%E6%A8%A1%E5%BC%8F%E5%8F%AA%E6%9C%89%E4%B8%80%E7%A7%8D%E3%80%82">Unity Canvas Scaler 组件实现UI自适应</a></p>
+<p>应该在UI排版初期就考虑好画布大小和自适应方式，以免出现因为调整屏幕大小比例UI满屏乱飞的情况。</p>
+</blockquote>
+<p>在Game窗口可以改变预览的屏幕尺寸：</p>
+<p><img alt="image.png" src="../../../assets/images/UnityGameArt/image%2011.png" /></p>
+<h2 id="_5">其他</h2>
+<h3 id="unity3dprobuilder">在Unity内构建3D关卡原型：ProBuilder插件</h3>
+<p><img alt="image.png" src="../../../assets/images/UnityGameArt/image%2012.png" /><br />
+- <a href="https://docs.unity3d.com/Packages/com.unity.probuilder@4.0/manual/overview-ui.html">ProBuilder 官方文档</a><br />
+- <a href="https://www.youtube.com/watch?v=qV2o1D1uWgE&amp;t=715s">Pro Builder 使用教学_youtube</a></p>
+<h3 id="unity-sorting-layer"><a href="https://gamedevbeginner.com/how-to-use-sorting-layers-in-unity/#:~:text=To%20add%20more%2C%20simply%20click,of%20layers%20at%20the%20top">在 Unity 中使用排序图层（Sorting Layer）</a></h3>
+<p>在 2D 项目中，当多个元素重叠时可能出现前后层级显示不正确的情况。这篇文章系统介绍了如何通过 Sorting Layer 调整素材的渲染层级。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../../Unity/csharp%E7%BC%96%E7%A8%8B%E8%83%BD%E5%8A%9B%E8%BF%9B%E9%98%B6/" class="md-footer__link md-footer__link--prev" aria-label="上一页: C#编程能力进阶">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                C#编程能力进阶
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../URP%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE%E4%BB%8B%E7%BB%8D/" class="md-footer__link md-footer__link--next" aria-label="下一页: URP相关配置介绍">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                URP相关配置介绍
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "toc.follow", "search.highlight", "search.share", "search.suggest", "content.action.edit", "content.action.view", "content.code.copy", "content.code.select", "content.code.annotate", "content.tabs.link", "content.tooltips", "content.footnote.tooltips", "announce.dismiss"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
